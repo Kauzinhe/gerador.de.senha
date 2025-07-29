@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gerador de Senhas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Gerador de Senhas</h1>
+    <div class="senha" id="senha">Clique em gerar para criar a senha</div>
+
+    <label for="length">Comprimento da senha:</label>
+    <input type="number" id="length" min="4" max="64" value="12" />
+
+    <div class="checkbox-group">
+      <label><input type="checkbox" id="maiusculas" checked /> Letras Maiúsculas (A-Z)</label>
+      <label><input type="checkbox" id="minusculas" checked /> Letras Minúsculas (a-z)</label>
+      <label><input type="checkbox" id="numeros" checked /> Números (0-9)</label>
+      <label><input type="checkbox" id="simbolos" /> Símbolos (!@#$%)</label>
+    </div>
+
+    <button id="gerar">Gerar Senha</button>
+    <div class="copy-msg" id="copy-msg"></div>
+  </div>
+
+  <script>
+    const senhaEl = document.getElementById('senha');
+    const lengthEl = document.getElementById('length');
+    const maiusculasEl = document.getElementById('maiusculas');
+    const minusculasEl = document.getElementById('minusculas');
+    const numerosEl = document.getElementById('numeros');
+    const simbolosEl = document.getElementById('simbolos');
+    const gerarBtn = document.getElementById('gerar');
+    const copyMsg = document.getElementById('copy-msg');
+
+    const letrasMaiusculas = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const letrasMinusculas = 'abcdefghijklmnopqrstuvwxyz';
+    const numeros = '0123456789';
+    const simbolos = '!@#$%^&*()-_=+[]{}|;:,.<>?';
+
+    function gerarSenha() {
+      let charSet = '';
+      if (maiusculasEl.checked) charSet += letrasMaiusculas;
+      if (minusculasEl.checked)
+    }
